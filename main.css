@@ -1,0 +1,80 @@
+p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
+}
+
+/* Стили для заголовка h1 */
+.h1-style {
+    font-size: 64px;
+    color: #1F3F68;
+}
+
+/* Стили для заголовка h2 (на странице контакты) */
+.h2-style {
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+}
+
+/* Стили для заголовка h3 */
+.h3-style {
+    font-size: 36px;
+    text-align: center;
+}
+
+/* Стили для заголовка h4 */
+.h4-style {
+    font-size: 20px;
+    line-height: 30px;
+    color: #1F3F68;
+}
+
+/* Стили для всех полей ввода (input, textarea) */
+.input-style {
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0.4;
+}
+
+/* Стили для кнопки отправки формы */
+.submit-button {
+    background: #5A98D0;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+form {
+    background-image: url('1613175716_66-p-zheltii-fon-bez-nichego-dlya-fotoshopa-78.jpg'); /* Замените 'background-image.jpg' на фактический путь к вашему изображению */
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /* Добавим отступ для видимости контента */
+}
+nav{
+    font-size: 40px;
+
+}
+nav li{
+    display: inline;
+    font-size: 25px;
+    padding: 0 20px;
+    border-right:  black solid;
+    border-end-end-radius: 30px 80px;
+    border-top-right-radius: 30px 80px;
+    
+}
+nav li a{
+    text-align: center;
+    text-decoration:none;
+    color: black;
+}
+nav{
+    background-image: 
+    linear-gradient(white, teal);
+}
