@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <link rel="stylesheet" href="src/assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <div class="header">
         <span class="logo"><a href="index.html">IT WEBSITE</a></span>
         <ul class="header-menu">
-            <li><a href="">Services</a></li>
-            <li><a href="">Media</a></li>
-            <li><a href="">Cases</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">Contacts</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contacts</a></li>
         </ul>
+        <div class="contacts">
         <ul class="header-tel">
-            <img src="" alt="Header tel">
-            <li><a href="tel:+791111111111">+7 (111) 111 11 11</a></li>
-            <li><a href="tel:+791111111111">+7 (111) 111 11 11</a></li>
-        </ul>
-        <ul class="header-mails">
-            <img src="" alt="Mail">
-            <li><a href="mailto:itcompany@mail.com">itcompany@mail.com</a></li>
-        </ul>
+              <img src="/src/assets/img/smartphone_outline_24.svg" alt="Header tel">
+                <li><a href="tel:+791111111111">+7 (111) 111 11 11</a></li>
+                <li><a href="tel:+791111111111">+7 (111) 111 11 11</a></li>
+            </ul>
+            <ul class="header-mails">
+                <img src="/src/assets/img/mail_outline_24.svg" alt="Mail">
+                <li><a href="mailto:itcompany@mail.com">itcompany@mail.com</a></li>
+            </ul>
+        </div>
     </div>
 
     <hr>
@@ -38,11 +42,13 @@
             <h3>Leave your contacts and we will call you back within 30 minutes</h3>
             <div class="application-form">
                 <form>
-                    <label>Phone number: </label>
-                    <input class="input" type="text" name="phone-number">
-                    <label>Full name: </label>
-                    <input class="input" type="text" name="full-name">
-                    <input class="button" type="submit" value="Get consultation"><br>
+                    <label>Phone number: 
+                        <input class="input" type="text" name="phone-number" placeholder="+7 (111) 111-11-11">
+                    </label>
+                    <label>Full name: 
+                        <input class="input" type="text" name="full-name" placeholder="Иван Иванов">
+                    </label>
+                    <button class="button" type="submit">Get consultation</button>
                 </form>
             </div>
         </div>
@@ -276,20 +282,38 @@
 
     <div class="footer">
         <h2>IT WEBSITE</h2>
-        <ul class="footer-img-label">
-            <li><img src="" alt="Contact nums">Contact nums</li>
-            <li><img src="" alt="Post">Post</li>
-            <li><img src="" alt="Address">Address</li>
-            <li><img src="" alt="Request">Leave a request</li>
-        </ul>
-        <ul class="footer-value">
-            <li>+7 (778) 395 90 26</li>
-            <li>mail@mail.com</li>
-            <li>City city, steet st. 90</li>
-            <li>Leave a request</li>
+        <ul class="footer-list">
+            <li>
+                <h3>
+                    <img src="src/assets/img/smartphone_outline_24 (1).svg" alt="Contact nums">
+                    Contact nums
+                </h3>
+                <p>+7 (778) 395 90 26</p>
+            </li>
+            <li>
+                <h3>
+                    <img src="src/assets/img/mail_outline_24 (1).svg" alt="Post">
+                    Post
+                </h3>
+                <p>mail@mail.com</p>
+            </li>
+            <li>
+                <h3>
+                    <img src="src/assets/img/place_outline_24.svg" alt="Address">
+                    Address
+                </h3>
+                <p>City city, steet st. 90</p>
+            </li>
+            <li>
+                <h3>
+                    <img src="src/assets/img/document_outline_24.svg" alt="Request">
+                    Leave a request
+                </h3>
+                <p>Leave a request</p>
+            </li>
         </ul>
         <ul class="footer-end-label">
-            <li><img src="" alt="End img">We work throughout world</li>
+            <li><img src="src/assets/img/Vector.svg" alt="world image">We work throughout world</li>
         </ul>
     </div>
 </body>
