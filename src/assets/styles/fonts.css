@@ -21,3 +21,81 @@
          url("/static/fonts/Inter-Regular.woff2") format("woff");
     font-weight: 400;
 }
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-Bold"), local('SF Pro Text Bold'),
+        url("/static/fonts/SFProText-Bold.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-BoldItalic"), local('SF Pro Text Bold Italic'),
+    url("/static/fonts/SFProText-BoldItalic.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-Heavy"), local('SF Pro Text Heavy'),
+    url("/static/fonts/SFProText-Heavy.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-HeavyItalic"), local('SF Pro Text Heavy Italic'),
+    url("/static/fonts/SFProText-HeavyItalic.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-Light"), local('SF Pro Text Light'),
+    url("/static/fonts/SFProText-Light.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-LightItalic"), local('SF Pro Text Light Italic'),
+    url("/static/fonts/SFProText-LightItalic.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-Medium"), local('SF Pro Text Medium'),
+    url("/static/fonts/SFProText-Medium.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-MediumItalic"), local('SF Pro Text Medium Italic'),
+    url("/static/fonts/SFProText-MediumItalic.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-Bold"), local('SF Pro Text Bold'),
+    url("/static/fonts/SFProText-Bold.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText"), local('SF Pro Text'),
+    url("/static/fonts/SFProText-Regular.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-RegularItalic"), local('SF Pro Text Regular Italic'),
+    url("/static/fonts/SFProText-RegularItalic.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-Semibold"), local('SF Pro Text Semibold'),
+    url("/static/fonts/SFProText-Semibold.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local("SFProText-SemiboldItalic"), local('SF Pro Text Semibold Italic'),
+    url("/static/fonts/SFProText-SemiboldItalic.woff2") format("woff");
+}

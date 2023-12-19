@@ -1,0 +1,13 @@
+@media(max-width: 1230px){
+    ul.header-menu{
+        display: none;
+    }
+    .nav-button{
+        display: block;
+        align-items:flex-start;
+    }
+    span.logo{
+        align-items: center;
+        nav-index:initial;
+    }
+}
