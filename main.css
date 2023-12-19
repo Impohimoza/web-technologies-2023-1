@@ -4,33 +4,28 @@ p {
     color: #1F3F68;
 }
 
-/* Стили для заголовка h1 */
 .h1-style {
     font-size: 64px;
     color: #1F3F68;
 }
 
-/* Стили для заголовка h2 (на странице контакты) */
 .h2-style {
     font-weight: 500;
     font-size: 44px;
     text-align: center;
 }
 
-/* Стили для заголовка h3 */
 .h3-style {
     font-size: 36px;
     text-align: center;
 }
 
-/* Стили для заголовка h4 */
 .h4-style {
     font-size: 20px;
     line-height: 30px;
     color: #1F3F68;
 }
 
-/* Стили для всех полей ввода (input, textarea) */
 .input-style {
     border: 1px solid #356EAD;
     box-sizing: border-box;
@@ -38,7 +33,6 @@ p {
     opacity: 0.4;
 }
 
-/* Стили для кнопки отправки формы */
 .submit-button {
     background: linear-gradient(90deg, #4a75e6 30%, #8d55e9 95%); 
     border: none;
