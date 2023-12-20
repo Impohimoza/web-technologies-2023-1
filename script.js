@@ -87,9 +87,7 @@ function init() {
         ]
     }
 
-    console.log(data);
     const items = new ListItems(document.getElementById('list-items'), data);
-    console.log(items);
     items.render();
     items.init();
 
@@ -109,36 +107,6 @@ function init() {
 
         this.render = function () {
             this.el.insertAdjacentHTML('beforeend', this.renderParent(this.data))
-        }
-
-        this.renderParentw = function (data) {
-            let html = ``;
-            if(data.hasChildren){
-                html+=`
-                <div class="list-item" data-parent>
-                <div class="list-item__inner">
-                <img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>
-                <img class="list-item__folder" src="img/folder.png" alt="folder">
-                        <span>${data.name}</span>
-                    </div>
-                    <div class="list-item__items">
-                        ${this.renderChildren(data)}
-                    </div>
-                </div>
-                `;
-            }
-            else{
-                html+=`
-                <div class="list-item" data-parent>
-                <div class="list-item__inner">
-                <img class="list-item__arrow" src="img/transparent.png" data-open alt="transparent" style="visibility: hidden;">
-                <img class="list-item__folder" src="img/folder.png" alt="folder">
-                        <span>${data.name}</span>
-                    </div>
-                </div>
-                `;
-            }
-            return html;
         }
 
         this.renderParent = function (data) {
