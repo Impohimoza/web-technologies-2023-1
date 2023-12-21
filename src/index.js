@@ -565,15 +565,15 @@ const game = {
    * @return {{x: int, y: int}} Точку с координатами!!!!!!!!!!.
    */
   getRandomFreeCoordinates() {
-    let exclude ;
+    let randomCoordinate={};
     do {
-      exclude={
+      randomCoordinate={
       x : Math.floor(Math.random() * this.config.getColsCount()),
       y : Math.floor(Math.random() * this.config.getRowsCount()),
       }
       
-    }while(this.snake.isOnPoint(exclude));
-    return exclude;
+    }while(this.snake.isOnPoint(randomCoordinate));
+    return randomCoordinate;
   },
 
   /**
