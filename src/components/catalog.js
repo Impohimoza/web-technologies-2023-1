@@ -36,7 +36,7 @@ export class Catalog {
             }
         }
 
-        this.#paginationEl.addEventListener('click', (event) => {
+        this.#paginationEl.addEventListener('click', async (event) => {
             const item = event.target.dataset.catalogPaginationPage ? event.target : event.target.closest('[data-catalog-pagination-page]')
 
             if (!item) {
@@ -47,7 +47,7 @@ export class Catalog {
 
             this.setPage(page);
             this.pushState();
-            this.loadItems()
+            await this.loadItems()
         })
 
         this.loadItems()
@@ -71,14 +71,12 @@ export class Catalog {
         window.history.pushState({}, '', url)
     }
 
-    loadItems () {
+    async loadItems () {
         try {
-            this.#getItems({ limit: this.limit, page: this.#page })
-                .then(({ items, total }) => {
-                    this.#total = total
-                    this.renderItems(items)
-                    this.renderPagination()
-        })
+            const { items, total } = await this.#getItems({ limit: this.limit, page: this.#page });
+            this.#total = total;
+            this.renderItems(items);
+            this.renderPagination();
         } catch (error) {
             console.log(error);
         }
