@@ -1,9 +1,9 @@
 class Pizza {
     constructor(type, size) {
         const types = {
-            Margarita: { price: 500, calories: 300 },
-            Pepperoni: { price: 800, calories: 400 },
-            Bavarian: { price: 700, calories: 450 }
+            "Маргарита": { price: 500, calories: 300 },
+            "Пепперони": { price: 800, calories: 400 },
+            "Баварская": { price: 700, calories: 450 }
         };
 
         const sizes = {
@@ -20,15 +20,16 @@ class Pizza {
 
     addTopping(topping) {
         const toppingDetails = {
-            "mozzarella": { price: this.size === "Large" ? 100 : 50, calories: 20  },
-            "cheeseEdge": { price: this.size === "Large" ? 300 : 150, calories: 50 },
-            "cheddarParmesan": { price: this.size === "Large" ? 300 : 150, calories: 50 }
+            "Сливочная моцарелла": { price: this.size === "Large" ? 100 : 50, calories: 20  },
+            "Сырный борт": { price: this.size === "Large" ? 300 : 150, calories: 50 },
+            "Чеддр и пармезан": { price: this.size === "Large" ? 300 : 150, calories: 50 }
         };
         this.toppings.push({ topping, ...toppingDetails[topping] });
     }
 
     removeTopping(topping) {
-        this.toppings = this.toppings.filter(t => t.topping !== topping);
+        let index = this.toppings.findIndex((top) => top.topping===topping);
+        this.toppings.splice(index,1);
     }
 
     getToppings() {
@@ -52,9 +53,53 @@ class Pizza {
 }
 
 
-let myPizza = new Pizza("Pepperoni", "Large");
-myPizza.addTopping("cheeseEdge");
-myPizza.addTopping("mozzarella");
-console.log(`Total price: ${myPizza.calculatePrice()} rubles`);
-console.log(`Total calories: ${myPizza.calculateCalories()} calories`);
-console.log(`${myPizza.getSize()}`)
+    let customPizza;
+    function choosePizza(chosenPizza) {
+    customPizza = chosenPizza;
+    document.querySelectorAll('.pizza-item').forEach(item => item.style.border = '');
+    document.querySelectorAll('.quantity').forEach(item => item.innerText = '0');
+    document.getElementById(chosenPizza.getKind()).style.border='5px solid orange';
+    document.getElementById('add-2-cart').textContent = `${customPizza.calculatePrice()} руб., (${customPizza.calculateCalories()} кКал)`;
+    document.getElementById('radioS').checked = '0';
+
+}
+
+function resizePizza(){
+    if (document.getElementById('radioS').checked == '1') {
+        customPizza.size="Small";
+        customPizza.basePrice-= 100;
+        customPizza.baseCalories-= 100;
+        customPizza.toppings.forEach((item)=> {item.price/=2;});
+    } 
+    else{
+        customPizza.size="Large";
+        customPizza.basePrice+= 100;
+        customPizza.baseCalories+= 100;
+        customPizza.toppings.forEach((item)=> {item.price*=2;});
+    }
+
+    document.getElementById('add-2-cart').textContent = `${customPizza.calculatePrice()} руб., (${customPizza.calculateCalories()} кКал)`;
+}
+
+function addTop(toppingOption)
+{
+    let option = toppingOption.parentNode.previousSibling.previousSibling.previousSibling.previousSibling;
+    let quantity = toppingOption.previousSibling.previousSibling;
+    console.log(quantity.innerText++);
+    let toppingName = option.textContent.trim();
+    console.log(toppingName);
+    customPizza.addTopping(toppingName);
+    document.getElementById('add-2-cart').textContent = `${customPizza.calculatePrice()} руб., (${customPizza.calculateCalories()} кКал)`;
+}
+function remTop(toppingOption){
+    let option = toppingOption.parentNode.previousSibling.previousSibling.previousSibling.previousSibling;
+    let quantity = toppingOption.nextSibling.nextSibling;
+
+    if(+quantity.innerText>0) {
+    console.log(quantity.innerText--)
+    let toppingName = option.textContent.trim();
+    console.log(toppingName)
+    customPizza.removeTopping(toppingName);
+    document.getElementById('add-2-cart').textContent = `${customPizza.calculatePrice()} руб., (${customPizza.calculateCalories()} кКал)`;
+}
+}

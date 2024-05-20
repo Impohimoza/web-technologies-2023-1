@@ -7,10 +7,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <link rel="stylesheet" href="/src/assets/styles/style.sass">
 </head>
 <body>
-<div class="test" style="color: blue">
-    test
+    <div class="container">
+        <div class="pizza-placeholders">
+            <div class="pizza-item" id="Маргарита" onclick="choosePizza(new Pizza('Маргарита','Small'))">
+                <img src="assets/img/маргарита.png" height="250" width="250" alt="Марго"/>
+                <div class="pizza-name">Маргарита</div>
+            </div>
+            <div class="pizza-item" id="Пепперони" onclick="choosePizza(new Pizza('Пепперони','Small'))">
+                <img src="assets/img/pepperoni.png" height="250" width="250" alt="Пепперони"/>
+                <div class="pizza-name">Пепперони</div>
+            </div>
+            <div class="pizza-item" id="Баварская" onclick="choosePizza(new Pizza('Баварская','Small'))">
+                <img src="assets/img/баварская.png" height="250" width="250" alt="Баварская"/>
+                <div class="pizza-name">Баварская</div>
+            </div>
+        </div>
+    <div class="order-column">
+        <p>Выберите размер</p>
+        <div class="size-options">
+
+            <input type="radio" value="None" id="radioS" name="radio" onclick="resizePizza()" checked />
+            <input type="radio" value="None" id="radioL" name="radio" onclick="resizePizza()"/>
+            <label for="radioS">Маленькая</label>
+            <label for="radioL">Большая</label>
+            <div class="switch-wrapper">
+                <div class="switch">
+                    <div>Маленькая</div>
+                    <div>Большая</div>
+                </div>
+            </div>
+        </div>
+        <p>Добавить по вкусу</p>
+        <div class="topping-options">
+
+            <div class="topping-item">
+                <img src="assets/img/сырный%20борт.png" height="130" width="130" alt="Сырный борт"/>
+                <div class="t">Сырный борт</div>
+                <div>150/300</div>
+                <div class="topping-quantity-btns">
+                    <input type="image" src="assets/img/minus.png" width="15" height="15" class="t-quantity-rem" alt="hehe" onclick="remTop(this)">
+                    <div class="quantity">0</div>
+                    <input type="image" src="assets/img/plus.png" width="15" height="15" class="t-quantity-add" alt="hehe" onclick="addTop(this)">
+                </div>
+            </div>
+            <div class="topping-item">
+                <img src="assets/img/Моцарелла.jpg" height="130" width="130" alt="Моцарелла"/>
+                <div class="t">Сливочная моцарелла</div>
+                <div>50/100</div>
+                <div class="topping-quantity-btns">
+                    <input type="image" src="assets/img/minus.png" width="15" height="15" class="t-quantity-rem" alt="hehe" onclick="remTop(this)">
+                    <div class="quantity">0</div>
+                    <input type="image" src="assets/img/plus.png" width="15" height="15" class="t-quantity-add" alt="hehe" onclick="addTop(this)" >
+                </div>
+            </div>
+            <div class="topping-item">
+                <img src="assets/img/чеддер.jpg" height="130" width="130" alt="Чеддр"/>
+                <div class="t">Чеддр и пармезан</div>
+                <div>150/300</div>
+                <div class="topping-quantity-btns">
+                    <input type="image" src="assets/img/minus.png" width="15" height="15" class="t-quantity-rem" alt="hehe" onclick="remTop(this)">
+                    <div class="quantity">0</div>
+                    <input type="image" src="assets/img/plus.png" width="15" height="15" class="t-quantity-add" alt="hehe" onclick="addTop(this)">
+                </div>
+            </div>
+
+        </div>
+        <button id="add-2-cart" class="button">Добавить в корзину за <span id="btn-total"></span></button>
+    </div>
 </div>
 
 <script src="index.js"></script>
